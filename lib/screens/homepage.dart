@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:hackathon/screens/cart.dart';
 import 'package:hackathon/screens/children.dart';
 import 'package:hackathon/screens/men.dart';
+import 'package:hackathon/screens/payment.dart';
 import 'package:hackathon/screens/women.dart';
 import 'package:hackathon/widgets/textfield.dart';
 
@@ -92,7 +93,8 @@ class HomePage extends StatelessWidget {
               women(),
               men(),
               //children()
-              cart()
+              cart(),
+              //payment(),
             ],
           ),
         ),
