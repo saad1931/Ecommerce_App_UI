@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:hackathon/screens/propage.dart';
+import 'package:hackathon/screens/propage3.dart';
+import 'package:hackathon/screens/propage6.dart';
 import 'package:hackathon/widgets/post_widget.dart';
 
 class children extends StatelessWidget {
@@ -10,43 +13,67 @@ class children extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            post("assets/images/profile.png",
-             "Sandy Williams",
-             picture_widget(168, 186, "assets/images/5.png"),
-             picture_widget(84, 75, "assets/images/2.png"),
-             picture_widget(84, 75, "assets/images/3.png"),
-             picture_widget(84, 75, "assets/images/4.png"),
-             picture_widget(84, 75, "assets/images/1.png")
-             ),
+            GestureDetector(
+              onTap: (){
+                     Navigator.push(context,
+                     MaterialPageRoute(builder: (context) =>  propage3()));
+                  },
+              child: post("assets/images/profile.png",
+               "Sandy Williams",
+               picture_widget(168, 184, "assets/images/c4.jpeg"),
+               picture_widget(84, 75,"assets/images/c1.jpeg"),
+               picture_widget(84, 75, "assets/images/c2.jpeg"),
+               picture_widget(84, 75, "assets/images/c3.jpeg"),
+               picture_widget(84, 75, "assets/images/c4.jpeg")
+               ),
+            ),
       
+            SizedBox(height: 30,),
+            GestureDetector(
+              onTap: (){
+                     Navigator.push(context,
+                     MaterialPageRoute(builder: (context) =>  propage6()));
+                  },
+              child: post("assets/images/profile.png",
+               "Sandy Williams",
+               picture_widget(168, 184, "assets/images/t1.jpeg"),
+               picture_widget(84, 75,"assets/images/t2.jpeg"),
+               picture_widget(84, 75, "assets/images/t3.jpeg"),
+               picture_widget(84, 75, "assets/images/t4.jpeg"),
+               picture_widget(84, 75, "assets/images/t5.jpeg")
+               ),
+            ),
              SizedBox(height: 30,),
-             post("assets/images/profile2.png",
-             "Alero Samuel",
-             picture_widget(168, 186, "assets/images/5.png"),
-             picture_widget(84, 75, "assets/images/2.png"),
-             picture_widget(84, 75, "assets/images/3.png"),
-             picture_widget(84, 75, "assets/images/4.png"),
-             picture_widget(84, 75, "assets/images/1.png")
-             ),
-             SizedBox(height: 30,),
-              post("assets/images/profile.png",
-             "Sandy Williams",
-             picture_widget(168, 186, "assets/images/5.png"),
-             picture_widget(84, 75, "assets/images/2.png"),
-             picture_widget(84, 75, "assets/images/3.png"),
-             picture_widget(84, 75, "assets/images/4.png"),
-             picture_widget(84, 75, "assets/images/1.png")
-             ),
+            GestureDetector(
+              onTap: (){
+                     Navigator.push(context,
+                     MaterialPageRoute(builder: (context) =>  propage3()));
+                  },
+              child: post("assets/images/profile.png",
+               "Sandy Williams",
+               picture_widget(168, 184, "assets/images/c4.jpeg"),
+               picture_widget(84, 75,"assets/images/c1.jpeg"),
+               picture_widget(84, 75, "assets/images/c2.jpeg"),
+               picture_widget(84, 75, "assets/images/c3.jpeg"),
+               picture_widget(84, 75, "assets/images/c4.jpeg")
+               ),
+            ),
       
-             SizedBox(height: 30,),
-             post("assets/images/profile2.png",
-             "Alero Samuel",
-             picture_widget(168, 186, "assets/images/5.png"),
-             picture_widget(84, 75, "assets/images/2.png"),
-             picture_widget(84, 75, "assets/images/3.png"),
-             picture_widget(84, 75, "assets/images/4.png"),
-             picture_widget(84, 75, "assets/images/1.png")
-             ),
+            SizedBox(height: 30,),
+            GestureDetector(
+              onTap: (){
+                     Navigator.push(context,
+                     MaterialPageRoute(builder: (context) =>  propage6()));
+                  },
+              child: post("assets/images/profile.png",
+               "Sandy Williams",
+               picture_widget(168, 184, "assets/images/t1.jpeg"),
+               picture_widget(84, 75,"assets/images/t2.jpeg"),
+               picture_widget(84, 75, "assets/images/t3.jpeg"),
+               picture_widget(84, 75, "assets/images/t4.jpeg"),
+               picture_widget(84, 75, "assets/images/t5.jpeg")
+               ),
+            ),
              SizedBox(height: 30,),
           ],
         ),

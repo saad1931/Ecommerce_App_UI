@@ -34,7 +34,7 @@ class _screen1State extends State<screen1> {
           children: [
             SizedBox(height: 200),
             Image.asset("assets/images/logo.png"),
-            SizedBox(height: 250),
+            SizedBox(height: 400),
             Image.asset("assets/images/box.png"),
           ],
         ),

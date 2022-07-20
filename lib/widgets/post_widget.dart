@@ -25,6 +25,7 @@ Widget post(img,tw,cw,cw1,cw2,cw3,cw4) {
                 SizedBox(height: 20,),
                 Row(
                   children: [
+                    SizedBox(width: 10,),
                     cw,
                     // picture_widget(290, 186, img),
                     Column(
@@ -69,7 +70,7 @@ Widget post(img,tw,cw,cw1,cw2,cw3,cw4) {
                         color: Color(0xffFE2550),
                         borderRadius: BorderRadius.all(Radius.circular(3))
                       ),
-                    child: Center(child: Text("#purple",style: GoogleFonts.raleway(fontSize: 10,fontWeight: FontWeight.normal,color: Colors.white))),
+                    child: Center(child: Text("#cool",style: GoogleFonts.raleway(fontSize: 10,fontWeight: FontWeight.normal,color: Colors.white))),
                     ),
                   ],
                 ),

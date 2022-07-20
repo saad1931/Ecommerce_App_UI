@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hackathon/screens/login.dart';
+import 'package:hackathon/screens/screen1.dart';
 import 'package:hackathon/screens/screen2.dart';
 import 'package:hackathon/screens/screen3.dart';
 import 'package:hackathon/screens/screen4.dart';
@@ -28,7 +29,8 @@ class _PageViewDemoState extends State<PageViewDemo> {
         screen4(),
         screen2(),
         screen3(),
-        Login_s(),
+        //Login_s(),
+        
       ],
     );
   }

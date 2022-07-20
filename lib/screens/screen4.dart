@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:hackathon/screens/homepage.dart';
+import 'package:hackathon/screens/login.dart';
 import 'package:hackathon/widgets/text.dart';
 
 class screen4 extends StatelessWidget {
@@ -76,18 +78,24 @@ class screen4 extends StatelessWidget {
                 Positioned(
                   top: 620,
                   left: 22,
-                  child: Center(
-                    child: Stack(
-                      children: [
-                        Container(child: Image.asset("assets/images/box3.png")),
-                        Positioned(
-                          top: 18,
-                          left: 101,
-                          child: Container(
-                            child: txt("Shop Now", 24, FontWeight.w800, GoogleFonts.raleway),
-                          ),
-                        )
-                      ],
+                  child: GestureDetector(
+                    onTap: (){
+                     Navigator.push(context,
+                     MaterialPageRoute(builder: (context) => const Login_s()));
+                  },
+                    child: Center(
+                      child: Stack(
+                        children: [
+                          Container(child: Image.asset("assets/images/box3.png")),
+                          Positioned(
+                            top: 18,
+                            left: 101,
+                            child: Container(
+                              child: txt("Shop Now", 24, FontWeight.w800, GoogleFonts.raleway),
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                   ),
                 ),
