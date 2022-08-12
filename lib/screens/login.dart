@@ -20,7 +20,6 @@ class _Login_sState extends State<Login_s> {
         backgroundColor: Colors.white,
         body: Center(
           child: Column(
-           
             children: [
               SizedBox(height: 60,),
               Image.asset("assets/images/logo3.png",height: 127,width: 207,),

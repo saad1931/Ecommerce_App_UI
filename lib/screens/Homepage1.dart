@@ -1,32 +1,32 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:hackathon/screens/Homepage1.dart';
 import 'package:hackathon/screens/cart.dart';
 import 'package:hackathon/screens/children.dart';
+import 'package:hackathon/screens/homepage.dart';
 import 'package:hackathon/screens/men.dart';
 import 'package:hackathon/screens/payment.dart';
 import 'package:hackathon/screens/propage.dart';
 import 'package:hackathon/screens/setting.dart';
+import 'package:hackathon/screens/top.dart';
 import 'package:hackathon/screens/women.dart';
 import 'package:hackathon/widgets/textfield.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+class HomePage1 extends StatefulWidget {
+  const HomePage1({Key? key}) : super(key: key);
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<HomePage1> createState() => _HomePage1State();
 }
 
-class _HomePageState extends State<HomePage> {
-final pg=[
-  const HomePage(),
-  const cart(),
-  const cart(),
-  const payment(),
-  
- ];
+class _HomePage1State extends State<HomePage1> {
 
+final pg=[
+  const Top(),
+  const cart(),
+  const setting(),
+  const payment(),
+ ];
   
   int c_tab=0;
 
@@ -69,59 +69,10 @@ final pg=[
                 ],
               ),
             ),
-            bottom: TabBar(
-              indicator: UnderlineTabIndicator(
-                borderSide: BorderSide(
-                  width: 5.0,
-                  color: Color(0xffFE2550),
-                ),
-                insets: EdgeInsets.symmetric(horizontal: 12.0),
-              ),
-              tabs: [
-               
 
-                Tab(
-                  child: Text("Women",
-                      style: GoogleFonts.raleway(
-                          fontSize: 14,
-                          fontWeight: FontWeight.w600,
-                          color: Colors.black)),
-                ),
-                Tab(
-                  child: Text("Men",
-                      style: GoogleFonts.raleway(
-                          fontSize: 14,
-                          fontWeight: FontWeight.w600,
-                          color:  Colors.black)),
-                ),
-                Tab(
-                  child: Text("Children",
-                      style: GoogleFonts.raleway(
-                          fontSize: 14,
-                          fontWeight: FontWeight.w600,
-                          color: Colors.black)
-                          ),
-                ),
-                
-              ],
-              
-            ),
-            
-          ),
-          body: 
-           TabBarView(
-            children: [
-              women(),
-              men(),
-              children(),
-              //propage()
-              //children()
-              //cart(),
-              //payment(),
-              //pro_page()
-            ],
-          ),
+        ),
           
+          body: pg[c_tab],
           bottomNavigationBar: BottomAppBar(
            
           color:  Colors.white,
@@ -137,7 +88,7 @@ final pg=[
                   
                   
                 }, 
-                
+               
 
                 icon: c_tab==0
                 ? Image.asset("assets/images/home.png",height: 30,color: Color(0xffFE2550),):Image.asset("assets/images/home.png",height: 30,color:Colors.grey)
@@ -149,7 +100,7 @@ final pg=[
                 onPressed: (){
                   setState(() {
                     Navigator.push(context, MaterialPageRoute(builder: (context) =>  cart()));
-                    //c_screen=const Login_s();
+                   
                     c_tab = 1;
                     
                   });
@@ -169,7 +120,7 @@ final pg=[
                   });
                 
                 }, 
-                //icon: Icon(Icons.add_box,color: Colors.white,size: 35,),
+               
                icon: c_tab==2
               ? Image.asset("assets/images/setting.png",height: 30,color: Color(0xffFE2550),):Image.asset("assets/images/setting.png",height: 30,color:Colors.grey,)
 
@@ -178,10 +129,10 @@ final pg=[
                 IconButton(
                 onPressed: (){
                   setState(() {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => const HomePage1()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const setting()));
                     c_tab=3;
                   });
-                //icon: c_tab==3 ? Colors.white :Colors.black; 
+               
                 }, 
                 icon: c_tab==3
                 ? Image.asset("assets/images/plus.png",height: 30,color: Color(0xffFE2550),):Image.asset("assets/images/plus.png",height: 30,color:Colors.grey,)
@@ -192,9 +143,9 @@ final pg=[
                 
           ),
         ),
-        ),
         
       ),
+      )
     );
   }
 }

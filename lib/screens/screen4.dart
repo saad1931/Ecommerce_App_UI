@@ -22,7 +22,7 @@ class screen4 extends StatelessWidget {
                   decoration: BoxDecoration(
                    image: DecorationImage(
                    fit: BoxFit.fill,
-                   image: AssetImage("assets/images/women1.png"),
+                   image: AssetImage("assets/images/man12.jpg"),
                    ),
                   ),
                 ),
@@ -62,7 +62,7 @@ class screen4 extends StatelessWidget {
                   top: 550 ,
                   left: 29,
                   child: Container(
-                    child: txt("Jennifer Kingsley exploring the new range\nof winter fashion wear", 15, FontWeight.w900,GoogleFonts.raleway),
+                    child: txt("Jhon Wick exploring the new range\nof winter fashion wear", 15, FontWeight.normal,GoogleFonts.raleway),
                   ),
                 ),
 

@@ -49,7 +49,7 @@ Widget Textfield_Widget2(l_text, ) {
       child: TextFormField(
         
         
-        style: TextStyle(color: Colors.white),
+        style: TextStyle(color: Colors.grey),
         
         decoration: InputDecoration(
           
